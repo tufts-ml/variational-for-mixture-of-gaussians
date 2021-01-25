@@ -2,7 +2,25 @@ Contains a "natural exponential family" form of a Gaussian mixture model with co
 
 Develops variational inference to fit the model to data.
 
-## Code
+# Visualizations
+
+**Expected Plot of Learned Cluster Centers**
+
+We show the results of the posterior mean for each cluster's location over 25 random initializations on same dataset of 2-dim observations.
+
+![Learned Mean visualization](https://github.com/tufts-ml/variational-for-mixture-of-gaussians/blob/master/viz_learned_means_of_25_runs.png?raw=true)
+
+We emphasize that some of these runs *have not yet converged* in the alloted iterations. Some also get stuck in bad local optima.
+
+**Expected Plot of ELBO vs iteration**
+
+Should show monotonic improvement in the objective over 25 random initializations on same dataset
+
+![Monotonic improvement in ELBO over 25 runs on same data](https://github.com/tufts-ml/variational-for-mixture-of-gaussians/blob/master/viz_monotonic_ELBO_of_25_runs.png?raw=true)
+
+
+
+# Code Contents
 
 * [exp_fam_lik_normal_fixed_var.py](https://github.com/tufts-ml/variational-for-mixture-of-gaussians/blob/master/exp_fam_lik_normal_fixed_var.py)
 
@@ -79,14 +97,6 @@ Will show that after each update (estep update of local assignment posteriors q(
   10/50 after estep   -0.167051
   10/50 after mstep   -0.167051
 ```
-
-# Visualizations
-
-**Expected Plot of ELBO vs iteration**
-
-Should show monotonic improvement in the objective over 25 random initializations.
-
-![Monotonic improvement in ELBO](https://github.com/tufts-ml/variational-for-mixture-of-gaussians/blob/master/monotonic_ELBO.png?raw=true)
 
 
 # Derivation
