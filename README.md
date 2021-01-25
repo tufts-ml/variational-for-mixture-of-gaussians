@@ -80,8 +80,16 @@ Will show that after each update (estep update of local assignment posteriors q(
   10/50 after mstep   -0.167051
 ```
 
+# Visualizations
 
-## Derivation
+**Expected Plot of ELBO vs iteration**
+
+Should show monotonic improvement in the objective over 25 random initializations.
+
+![Monotonic improvement in ELBO](https://github.com/tufts-ml/variational-for-mixture-of-gaussians/blob/master/monotonic_ELBO.png?raw=true)
+
+
+# Derivation
 
 Writeup describing notation and updates:
 
