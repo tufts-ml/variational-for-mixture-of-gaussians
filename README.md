@@ -4,17 +4,23 @@ Develops variational inference to fit the model to data.
 
 ## Code
 
-Class defining the Likelihood (in natural exp fam form) for a Normal with fixed variance:
-
 * [exp_fam_lik_normal_fixed_var.py](https://github.com/tufts-ml/variational-for-mixture-of-gaussians/blob/master/exp_fam_lik_normal_fixed_var.py)
 
-Class defining the conjugate Prior (in natural exp fam form):
+Class defining the Likelihood (in natural exp fam form) for a Normal with fixed variance
+
+Tests: Verified that this distribution integrates to 1 numerically (and thus defines a valid PDF).
+
 
 * [exp_fam_prior_normal_fixed_var.py](https://github.com/tufts-ml/variational-for-mixture-of-gaussians/blob/master/exp_fam_prior_normal_fixed_var.py)
 
-Script demonstrating posterior inference (given N observations, prints expectations under the posterior)
+Class defining the conjugate Prior (in natural exp fam form)
+
+Tests: Verified that this distribution integrates to 1 numerically (and thus defines a valid PDF).
+
 
 * [run_posterior_update.py](https://github.com/tufts-ml/variational-for-mixture-of-gaussians/blob/master/run_posterior_update.py)
+
+Script demonstrating posterior inference (given N observations, prints expectations under the posterior)
 
 **Expected output**
 
@@ -39,9 +45,9 @@ Posterior Expected value of phi_D after 100000 observations:
 ```
 
 
-Script demonstrating coordinate ascent with variational objective (given N observations from a mixture, recover the q approximate posteriors over cluster means)
-
 * [train_mixture_via_variational_coord_ascent.py](https://github.com/tufts-ml/variational-for-mixture-of-gaussians/blob/master/train_mixture_via_variational_coord_ascent.py)
+
+Script demonstrating coordinate ascent with variational objective (given N observations from a mixture, recover the q approximate posteriors over cluster means)
 
 Will print the numerical value of the per-token ELBO (evidence lower bound objective, normalized by total number of observed scalars).
 
