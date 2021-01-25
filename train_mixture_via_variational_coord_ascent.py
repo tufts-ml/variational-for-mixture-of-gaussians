@@ -166,7 +166,7 @@ if __name__ == '__main__':
     fig, ax = plt.subplots(nrows=5, ncols=5, sharex=True, sharey=True)
     for row in range(5):
         for col in range(5):
-            ax[row, col].plot(data_ND[:,0], data_ND[:,1], 'k.-', alpha=0.1)
+            ax[row, col].plot(data_ND[:,0], data_ND[:,1], 'k.', alpha=0.1)
 
             k = 5 * row + col
             _, _, q_list = config_list[k]
